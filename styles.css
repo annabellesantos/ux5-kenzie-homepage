@@ -1,0 +1,65 @@
+/* extra info here
+*/
+
+/* mobile-first */
+
+/* base styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+}
+li {
+  list-style-type: none;
+}
+nav {
+}
+/* layout styles */
+.navbar {
+}
+.header {
+}
+.testimonial {
+}
+.enrollment {
+}
+.compare {
+}
+.meetkenzie {
+}
+.people {
+}
+.students {
+}
+.contact {
+}
+/* block styles */
+.navbar_menu {
+}
+.header_video {
+}
+.testimonial_wrapper {
+}
+.enrollment_wrapper {
+}
+.people_cards {
+}
+.students_video {
+}
+.students_text {
+}
+.contact_form {
+}
+/* desktop */
+
+@media (min-width: 600px) {
+  /* base styles */
+  /* layout styles */
+  /* block styles */
+}

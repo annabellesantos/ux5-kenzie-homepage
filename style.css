@@ -1,0 +1,279 @@
+/* extra info here
+*/
+/* variables */
+/* repeatable mix-ins */
+/* mobile-first */
+/* base styles */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1e1f;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+button,
+a {
+  font-family: "Nunito", sans-serif;
+  color: #eeeeee;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+ul {
+  list-style: none;
+  /* li a {
+    text-decoration-line: none;
+  } */
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: #a6ffdc;
+  color: #1c1e1f;
+}
+
+/* layout styles */
+.navbar_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 4px;
+}
+
+.navbar_menu ul li {
+  margin: 0.5em;
+}
+
+.navbar_menu ul button {
+  border-radius: 4px;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.testimonial_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 20px;
+}
+
+.testimonial_wrapper p {
+  padding-left: 16px;
+}
+
+.enrollment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 12px;
+}
+
+.meetkenzie {
+  padding: 20px 40px;
+  margin: 0 20px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "story    story" "team     board" "mentors  advisors" "students students";
+  text-align: center;
+}
+
+.people_team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 24px 16px;
+}
+
+/* block styles */
+.header_text h1 {
+  padding: 20px 12px 12px;
+}
+
+.header_text h2 {
+  margin: 0 20px;
+}
+
+.header_video {
+  margin: 3em;
+  width: 100%;
+}
+
+.enrollment_wrapper {
+  /*   border: 1px solid black; */
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  margin: 16px;
+  width: 400px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.enrollment_wrapper * {
+  margin: 4px;
+}
+
+.enrollment_wrapper button {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+}
+
+.compare {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #333333;
+  padding: 40px 0;
+}
+
+.compare h2 {
+  margin: 0 20px;
+}
+
+.compare button {
+  margin: 16px;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* meet kenzie grid areas */
+.story {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: story;
+  border: 1px dotted red;
+}
+
+.team {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: team;
+}
+
+.board {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: board;
+}
+
+.mentors {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: mentors;
+}
+
+.advisors {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: advisors;
+}
+
+.students {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: students;
+}
+
+/* desktop */
+@media (min-width: 600px) {
+  /* base styles */
+  /* layout styles */
+  /* block styles */
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+/* extra info here
+*/
+/* mobile-first */
+/* base styles */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* layout styles */
+/* block styles */
+/* desktop */
+@media (min-width: 600px) {
+  /* base styles */
+  /* layout styles */
+  /* block styles */
+}
+/*# sourceMappingURL=old_style.css.map */

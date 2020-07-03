@@ -71,6 +71,7 @@ button {
   border: none;
   padding: 0.5em 1em;
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .header {
@@ -117,29 +118,6 @@ button {
   margin: 12px;
 }
 
-.meetkenzie {
-  padding: 20px 40px;
-  margin: 0 20px;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "story    story" "team     board" "mentors  advisors" "students students";
-  text-align: center;
-}
-
-.people_team {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
-
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -170,9 +148,7 @@ button {
 }
 
 .enrollment_wrapper {
-  /*   border: 1px solid black; */
-  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  /*   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); */
   margin: 16px;
   width: 400px;
   height: 150px;
@@ -187,10 +163,6 @@ button {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 
 .enrollment_wrapper * {
@@ -201,6 +173,7 @@ button {
   border: none;
   border-radius: 4px;
   padding: 4px 12px;
+  font-weight: bold;
 }
 
 .compare {
@@ -231,33 +204,55 @@ button {
 }
 
 /* meet kenzie grid areas */
+.meetkenzie {
+  text-align: center;
+  padding: 20px 40px;
+  margin: 0 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 150px 150px 1fr;
+      grid-template-rows: 1fr 150px 150px 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "story    story" "team     board" "mentors  advisors" "students students";
+}
+
 .story {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: story;
-  border: 1px dotted red;
+  padding: 20px 20px;
 }
 
-.team {
+.story p {
+  display: inline-block;
+}
+
+.story a {
+  color: #a6ffdc;
+  font-weight: bold;
+}
+
+.people_team {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: team;
 }
 
-.board {
+.people_board {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: board;
 }
 
-.mentors {
+.people_mentors {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: mentors;
 }
 
-.advisors {
+.people_advisors {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: advisors;
@@ -270,10 +265,54 @@ button {
   grid-area: students;
 }
 
+.students .text {
+  padding: 32px;
+}
+
+.contact_form {
+  margin-top: 20px;
+}
+
+.contact_form .contact_form_submit {
+  border: none;
+  border-radius: 4px;
+  background-color: #a6ffdc;
+  color: #1c1e1f;
+  font-size: 1rem;
+  padding: 4px 12px;
+  margin: 8px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+}
+
 /* desktop */
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   /* base styles */
   /* layout styles */
+  .enrollment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .meetkenzie {
+    -ms-grid-rows: 1.5fr 1fr 1.5fr;
+        grid-template-rows: 1.5fr 1fr 1.5fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "story story story story" "team board mentors advisors" "students students students students";
+  }
+  .students {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   /* block styles */
 }
 /*# sourceMappingURL=style.css.map */

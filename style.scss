@@ -13,6 +13,7 @@ $h1-size: 2.5rem;
 $h2-size: 1.5rem;
 $button-size: 1rem;
 $side-margins: 0 20px;
+$button-padding: 4px 12px;
 
 /* repeatable mix-ins */
 @mixin flexCenter() {
@@ -73,6 +74,7 @@ button {
     border: none;
     padding: 0.5em 1em;
     font-size: $button-size;
+    font-weight: bold;
   }
 }
 .header {
@@ -89,20 +91,6 @@ button {
 .enrollment {
   @include flexCenter();
   margin: 12px;
-}
-.meetkenzie {
-  padding: 20px 40px;
-  margin: $side-margins;
-  display: grid;
-  grid-template-areas:
-    "story    story"
-    "team     board"
-    "mentors  advisors"
-    "students students";
-  text-align: center;
-}
-.people_team {
-  @include flexCenter();
 }
 .contact {
   @include flexCenter();
@@ -122,23 +110,19 @@ button {
   width: 100%;
 }
 .enrollment_wrapper {
-  /*   border: 1px solid black; */
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  /*   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); */
   margin: 16px;
   width: 400px;
   height: 150px;
   @include flexCenter();
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   * {
     margin: 4px;
   }
   button {
     border: none;
     border-radius: 4px;
-    padding: 4px 12px;
+    padding: $button-padding;
+    font-weight: bold;
   }
 }
 .compare {
@@ -156,29 +140,83 @@ button {
   }
 }
 /* meet kenzie grid areas */
+.meetkenzie {
+  text-align: center;
+  padding: 20px 40px;
+  margin: $side-margins;
+  display: grid;
+  grid-template-rows: 1fr 150px 150px 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "story    story"
+    "team     board"
+    "mentors  advisors"
+    "students students";
+}
+
 .story {
   grid-area: story;
-  border: 1px dotted red;
+  padding: 20px 20px;
+  p {
+    display: inline-block;
+  }
+  a {
+    color: $accent-color;
+    font-weight: bold;
+  }
 }
-.team {
+.people_team {
   grid-area: team;
 }
-.board {
+.people_board {
   grid-area: board;
 }
-.mentors {
+.people_mentors {
   grid-area: mentors;
 }
-.advisors {
+.people_advisors {
   grid-area: advisors;
 }
 .students {
   grid-area: students;
+  .text {
+    padding: 32px;
+  }
+}
+.contact_form {
+  margin-top: 20px;
+  .contact_form_submit {
+    border: none;
+    border-radius: 4px;
+    background-color: $button-bg;
+    color: $button-tx;
+    font-size: $button-size;
+    padding: $button-padding;
+    margin: 8px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+  }
 }
 /* desktop */
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   /* base styles */
   /* layout styles */
+  .enrollment {
+    display: flex;
+    flex-direction: row;
+  }
+  .meetkenzie {
+    grid-template-rows: 1.5fr 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "story story story story"
+      "team board mentors advisors"
+      "students students students students";
+  }
+  .students {
+    display: flex;
+    align-items: center;
+  }
   /* block styles */
 }
